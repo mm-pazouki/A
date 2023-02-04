@@ -5,6 +5,11 @@
     <title>Home</title>
 </head>
 <body>
-    <h3>Hello user</h3>
+    {% if name == 'admin' %}
+        <p>Sorry...</p>
+    {% else %}
+        <h3>Hello {{ name|upper }}</h3>
+    {% endif %}
+
 </body>
 </html>

@@ -4,4 +4,5 @@ def home(request):
     return  render(request, 'root.html')
 
 def say_hello(request):
-    return render(request, 'home.html')
+    person = {'name': 'mehdi'}
+    return render(request, 'home.html', context=person)
